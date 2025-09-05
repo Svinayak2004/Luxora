@@ -86,9 +86,9 @@ app.use((req,res,next)=>{
 });
 
 // root route
-// app.get('/', (req, res) =>{
-//     res.send('this is root')
-// });
+app.get('/', (req, res) =>{
+    res.redirect('/listings')
+});
 
 app.use('/listings', listingRouter)
 app.use("/listings" , reviewRouter)
